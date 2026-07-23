@@ -12,6 +12,7 @@ body {
     justify-content: center;
     align-items: center;
     overflow: hidden;
+    position: relative;
     color: #111;
     background: #f5f5f7;
 }
@@ -68,7 +69,11 @@ p {
 
 /* Glass buttons */
 .glass-link {
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+
     padding: 16px;
 
     border-radius: 18px;
@@ -89,6 +94,12 @@ p {
         transform 0.25s ease,
         background 0.25s ease,
         box-shadow 0.25s ease;
+}
+
+.glass-link img {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
 }
 
 .glass-link:hover {
@@ -115,5 +126,49 @@ p {
 
     h1 {
         font-size: 36px;
+    }
+}
+
+.contact-info {
+    position: fixed !important;
+    bottom: 15px !important;
+    left: 0 !important;
+    right: 0 !important;
+
+    width: 100%;
+    text-align: center;
+
+    font-size: 13px;
+    color: rgba(0, 0, 0, 0.4);
+
+    letter-spacing: 0.2px;
+    z-index: 9999;
+}
+
+.corner-gif {
+    position: fixed;
+
+    right: 30px;
+    bottom: 30px;
+
+    width: 64px;
+    height: 64px;
+
+    object-fit: contain;
+
+    z-index: 5;
+
+    filter: drop-shadow(0 10px 20px rgba(0,0,0,0.12));
+
+    animation: floatGif 4s ease-in-out infinite;
+}
+
+@keyframes floatGif {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
     }
 }
