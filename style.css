@@ -177,3 +177,106 @@ p {
         transform: translateY(-10px);
     }
 }
+
+/* Dark mode toggle button */
+.theme-toggle {
+    position: fixed;
+
+    bottom: 20px;
+    left: 20px;
+
+    width: 45px;
+    height: 45px;
+
+    border-radius: 50%;
+
+    border: 1px solid rgba(255,255,255,0.5);
+
+    background: rgba(255,255,255,0.45);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+
+    font-size: 20px;
+    cursor: pointer;
+
+    box-shadow:
+        0 8px 20px rgba(0,0,0,0.12);
+
+    transition: all 0.3s ease;
+
+    z-index: 9999;
+}
+
+.theme-toggle:hover {
+    transform: scale(1.1);
+}
+
+
+/* =====================
+   DARK MODE
+===================== */
+
+body.dark-mode {
+    color: #fff;
+    background: #050505;
+}
+
+
+body.dark-mode .background {
+    background:
+        radial-gradient(circle at 20% 20%, rgba(80,80,120,0.4), transparent 35%),
+        radial-gradient(circle at 80% 30%, rgba(0,120,255,0.25), transparent 40%),
+        linear-gradient(135deg, #111, #000);
+}
+
+
+body.dark-mode .glass-card {
+    background: rgba(255,255,255,0.08);
+
+    border: 1px solid rgba(255,255,255,0.15);
+
+    box-shadow:
+        0 30px 60px rgba(0,0,0,0.5),
+        inset 0 1px 1px rgba(255,255,255,0.15);
+}
+
+
+body.dark-mode .glass-link {
+    color: white;
+
+    background:
+        rgba(255,255,255,0.08);
+
+    border:
+        1px solid rgba(255,255,255,0.15);
+
+    box-shadow:
+        0 8px 20px rgba(0,0,0,0.3);
+}
+
+
+body.dark-mode .glass-link:hover {
+    background:
+        rgba(255,255,255,0.18);
+}
+
+
+body.dark-mode h1 {
+    color: white;
+}
+
+
+body.dark-mode p {
+    color: rgba(255,255,255,0.6);
+}
+
+
+body.dark-mode .contact-info {
+    color: rgba(255,255,255,0.45);
+}
+
+
+body.dark-mode .theme-toggle {
+    background: rgba(255,255,255,0.15);
+    color: white;
+}
